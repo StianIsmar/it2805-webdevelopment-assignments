@@ -1,0 +1,22 @@
+header {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+body {
+    background-color: #007849;
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#profilePicture {
+    max-width: 150px;
+    height: 9em;
+    border: 1px solid #021a40;
+}
+
+ol,
+footer {
+    font-family: Verdana, Geneva, sans-serif;
+}

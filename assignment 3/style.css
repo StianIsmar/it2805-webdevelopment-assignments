@@ -1,0 +1,28 @@
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        position: relative;
+    }
+    
+    .wrapper {
+        height: 100%;
+    }
+    
+    .footer {
+        background-color: powderblue;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+    }
+    /* Part 4 */
+    
+    ul {
+        list-style: square;
+    }
+    
+    ul ul li:last-child {
+        color: Red;
+    }
