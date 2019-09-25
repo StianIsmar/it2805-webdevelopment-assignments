@@ -1,0 +1,5 @@
+Questions
+
+1. Auto play on mobile phones does not work because of a few different reasons. The iOS developer library states that one reason is that the user could be on a cellular network, and would not want to load large videos because of the price per Mb. iOS prevents autplay and also preloading of the video until the user initiates it. I would think the same reasoning goes for android devices, where autplay is also turned off.
+
+2. If the user is browsing on a device with 320 x 568 resolution, the logo will be visible for the user. It is set to "hidden" with the rule "display: none" for screen resolutions 768px to 1024px.
