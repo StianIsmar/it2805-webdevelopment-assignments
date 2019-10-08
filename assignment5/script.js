@@ -61,4 +61,15 @@ window.onload = function() {
         'Bootstrap',
         'Node.js'
     ];
+
+    const populateList = (myList) => {
+        const tech = document.getElementById('tech');
+        for (var i = 0; i < technologies.length; i++) {
+            var node = document.createElement('LI');
+            var textnode = document.createTextNode(technologies[i]);
+            node.appendChild(textnode);
+            tech.appendChild(node);
+        }
+    };
+    populateList(technologies);
 };
