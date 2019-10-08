@@ -28,15 +28,24 @@ window.onload = function() {
     const h1 = document.getElementById('title');
     h1.innerText = 'Hello, JavaScript';
 
-    function changeDisplay() {
+    window.changeDisplay = function() {
         console.log('Pressed!');
         const magic = document.getElementById('magic');
-        magic.setAttribute('display', 'none');
-    }
+        magic.style.display = 'none';
+    };
 
-    function changeVisibility() {}
+    window.changeVisibility = function() {
+        const magic = document.getElementById('magic');
+        magic.style.visibility = 'hidden';
+        magic.style.display = 'block';
+    };
 
-    function reset() {}
+    window.reset = function() {
+        const magic = document.getElementById('magic');
+        magic.style.visibility = 'visible';
+        magic.style.display = 'block';
+        console.log(magic);
+    };
 
     /* Part 6 */
     const technologies = [
