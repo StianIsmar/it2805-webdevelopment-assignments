@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tax form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <header>
+        <img id="supermanIcon" src="./img/superman-flying.svg"></img>
+        <h1> Form for superheros</h1>
+    </header>
+    <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+        Real name: <input type="text" name="name" placeholder="Example: Peter Parker"><br> Gender:
+        <fieldset id="gender">
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+        </fieldset><br> E-mail: <input type="text" name="email" placeholder="spider@man.com"><br> Birthdate:
+        <input type="text" name="birthdate" placeholder="DD.MM.YYYY or DD/MM/YYYY"><br> Hero name: <input type="text" name="hero" placeholder="Spider-Man"><br> Do you wear spandex?
+
+        <fieldset id="spandex">
+            <input type="radio" name="spandex" value="false" checked> False<br>
+            <input type="radio" name="spandex" value="true"> True<br>
+        </fieldset>
+        Strength <input type="boolean" name="strength"><br></br>
+        Speed <select name="speed">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        <br></br>
+        Intelligence
+        <select name="speed">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+        <br>
+        <input id="submitButton" type="submit" value="Submit">
+        </input>
+    </form>
+</body>
+
+</html>
