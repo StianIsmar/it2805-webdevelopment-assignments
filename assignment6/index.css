@@ -1,7 +1,8 @@
 body {
     width: 100%;
     height: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     padding: 0;
     margin: 0;
     border: 0;
@@ -24,27 +25,49 @@ header,
 h1 {
     margin-top: 0;
     color: #FBB719;
+    font-size: 2em;
 }
 
 form {
     margin-left: 20%;
     margin-right: 20%;
-    font-size: 12px;
+    font-size: 1em;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
 fieldset {
     border-width: 1px;
-    border-color: #FC5105;
-}
-
-#submitButton {
-    height: 15px;
+    border-color: #333;
+    padding: 4px;
+    border-radius: 4px;
+    width: 80%;
+    position: relative;
+    left: 8%;
 }
 
 #supermanIcon {
     margin: 20px;
+    color: #333;
+    background-color: #FBB719
+}
+
+#supermanIcon:hover {
+    background-color: #195CFA
+}
+
+input,
+select {
+    right: 20px;
+    margin: 4px;
+}
+
+input[type=text] {
+    width: 10vw;
+}
+
+input[type=date] {
+    width: 10vw;
 }
 
 input input[type=text] {
@@ -56,13 +79,58 @@ input input[type=text] {
 
 input[type=text]:focus {
     border-color: #333;
+    width: 10vw;
+}
+
+input[type=date]:focus {
+    border-color: #333;
+    width: 10vw;
 }
 
 input[type=submit] {
-    padding: 5px 15px;
-    background: #ccc;
-    border: 0 none;
-    cursor: pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    /* change these properties to whatever you want */
+    background-color: #333;
+    width: 100px;
+    height: 50px;
+    color: white;
+    border-radius: 3px;
+    border-color: #333;
+    position: absolute;
+    right: 35%;
+}
+
+input[type=submit]:hover {
+    /* change these properties to whatever you want */
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    color: black;
+    border-radius: 4px;
+    border-color: #333;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+}
+
+.parent>div {
+    flex: 1;
+}
+
+.left {
+    background-color: #48A4D6;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.right {
+    background-color: white;
+    height: 400px;
+    width: 100%;
+}
+
+.text {
+    margin: 5px;
 }

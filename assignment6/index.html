@@ -13,47 +13,93 @@
         <img id="supermanIcon" src="./img/superman-flying.svg"></img>
         <h1> Form for superheros</h1>
     </header>
-    <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
-        Real name: <input type="text" name="name" placeholder="Example: Peter Parker"><br> Gender:
-        <fieldset id="gender">
-            <input type="radio" name="gender" value="male" checked> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-        </fieldset><br> E-mail: <input type="text" name="email" placeholder="spider@man.com"><br> Birthdate:
-        <input type="text" name="birthdate" placeholder="DD.MM.YYYY or DD/MM/YYYY"><br> Hero name: <input type="text" name="hero" placeholder="Spider-Man"><br> Do you wear spandex?
 
-        <fieldset id="spandex">
-            <input type="radio" name="spandex" value="false" checked> False<br>
-            <input type="radio" name="spandex" value="true"> True<br>
-        </fieldset>
-        Strength <input type="boolean" name="strength"><br></br>
-        Speed <select name="speed">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        <br></br>
-        Intelligence
-        <select name="speed">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            </select>
-        <br>
-        <input id="submitButton" type="submit" value="Submit">
+    <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+        <h1>Please fill in all fields</h1>
+
+        <div class="parent">
+            <div class="left">
+                <div class="text">Real name</div>
+                <div class="text">Gender</div>
+                <fieldset id="gender">
+                    <input type="radio" name="gender" value="male" checked> Male<br>
+                    <input type="radio" name="gender" value="female"> Female
+                </fieldset>
+                <div class="text"> E-mail</div>
+                <div class="text">Birthdate</div>
+
+
+                <div class="text">Hero name</div>
+                <div class="text">Do you wear spandex?</div>
+                <fieldset id="spandex">
+                    <input type="radio" name="spandex" value="false" checked> False<br>
+                    <input type="radio" name="spandex" value="true"> True
+                </fieldset>
+                <div class="text">Strength</div>
+                <div class="text">Strength</div>
+                <div class="text">Intelligence</div>
+                <input type="submit" value="Submit">
+
+
+
+            </div>
+            <div class="right">
+                <input type="text" name="name" placeholder="Example: Peter Parker"><br>
+                <br>
+                <br>
+                <br>
+
+                <br>
+                <input type="text" name="email" placeholder="spider@man.com"><br>
+                <input type="date" id="start" name="trip-start" value="1987-12-31" min="1800-12-12" max="1987-12-31"><br>
+                <input type="text" name="hero" placeholder="Spider-Man"><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <select name="strength">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select><br>
+                <select name="speed">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                <br>
+                <select name="intelligence">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        </select>
+                <br>
+
+            </div>
+        </div>
+
+        </br>
         </input>
     </form>
 </body>
