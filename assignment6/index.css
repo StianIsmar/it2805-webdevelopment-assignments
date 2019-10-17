@@ -70,6 +70,10 @@ input[type=date] {
     width: 15vw;
 }
 
+input[type=number] {
+    width: 15vw;
+}
+
 input input[type=text] {
     padding: 5px;
     border: 2px solid #ccc;
@@ -119,14 +123,14 @@ input[type=submit]:hover {
 
 .left {
     background-color: #48A4D6;
-    height: 350px;
+    height: 425px;
     width: 100%;
     position: relative;
 }
 
 .right {
     background-color: #3A6F9B;
-    height: 350px;
+    height: 425px;
     width: 100%;
 }
 

@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="tax.js"></script>
+
 </head>
 
 <body>
@@ -36,8 +38,11 @@
                     <input type="radio" name="spandex" value="true"> True
                 </fieldset>
                 <div class="text">Strength</div>
-                <div class="text">Strength</div>
+                <div class="text">Speed</div>
                 <div class="text">Intelligence</div>
+                <div class="text">Income</div>
+                <div class="text">Wealth</div>
+                <div class="text">Tax</div>
 
             </div>
             <div class="right">
@@ -92,6 +97,9 @@
                         <option value="10">10</option>
                         </select>
                 <br>
+                <input type="number" name="income" id="income" onkeyup="formChanged()" onchange="formChanged()" placeholder="Example: 2520" rtype="text" pattern="[1-9][0-9]{0,4}" required><br>
+                <input type="number" name="wealth" id="wealth" onkeyup="formChanged()" onchange="formChanged()" placeholder="Example: 42002" rtype="text" pattern="[1-9][0-9]{0,4}" required><br>
+                <input type="number" name="tax" value="42002" rtype="text" pattern="[1-9][0-9]{0,4}" disabled><br>
 
             </div>
 
