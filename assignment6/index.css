@@ -34,6 +34,7 @@ form {
     font-size: 1em;
     margin-top: 2%;
     margin-bottom: 2%;
+    color: #333;
 }
 
 fieldset {
@@ -56,18 +57,17 @@ fieldset {
     background-color: #195CFA
 }
 
-input,
-select {
+input {
     right: 20px;
     margin: 4px;
 }
 
 input[type=text] {
-    width: 10vw;
+    width: 15vw;
 }
 
 input[type=date] {
-    width: 10vw;
+    width: 15vw;
 }
 
 input input[type=text] {
@@ -126,11 +126,15 @@ input[type=submit]:hover {
 }
 
 .right {
-    background-color: white;
+    background-color: #3A6F9B;
     height: 400px;
     width: 100%;
 }
 
 .text {
     margin: 5px;
+}
+
+#start {
+    color: #333;
 }
