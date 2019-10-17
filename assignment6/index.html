@@ -21,7 +21,7 @@
             <div class="left">
                 <div class="text">Real name</div>
                 <div class="text">Gender</div>
-                <fieldset id="gender">
+                <fieldset id="gender" required>
                     <input type="radio" name="gender" value="male" checked> Male<br>
                     <input type="radio" name="gender" value="female"> Female
                 </fieldset>
@@ -31,33 +31,30 @@
 
                 <div class="text">Hero name</div>
                 <div class="text">Do you wear spandex?</div>
-                <fieldset id="spandex">
+                <fieldset id="spandex" required>
                     <input type="radio" name="spandex" value="false" checked> False<br>
                     <input type="radio" name="spandex" value="true"> True
                 </fieldset>
                 <div class="text">Strength</div>
                 <div class="text">Strength</div>
                 <div class="text">Intelligence</div>
-                <input type="submit" value="Submit">
-
-
 
             </div>
             <div class="right">
-                <input type="text" name="name" placeholder="Example: Peter Parker"><br>
+                <input type="text" name="name" placeholder="Example: Peter Parker" required pattern="[a-zA-Z0-9\s]+"><br>
                 <br>
                 <br>
                 <br>
 
                 <br>
-                <input type="text" name="email" placeholder="spider@man.com"><br>
-                <input type="date" id="start" name="trip-start" placeholder="1987-12-31" min="1800-12-12" max="1987-12-31"><br>
-                <input type="text" name="hero" placeholder="Spider-Man"><br>
+                <input type="text" name="email" placeholder="spider@man.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+                <input type="date" id="start" name="trip-start" placeholder="1987-12-31" min="1800-12-12" max="1987-12-31" required><br>
+                <input type="text" name="hero" placeholder="Spider-Man" required><br>
                 <br>
                 <br>
                 <br>
                 <br>
-                <select name="strength" class="dropdown">
+                <select name="strength" class="dropdown" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -69,7 +66,7 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                       </select><br>
-                <select name="speed" class="dropdown">
+                <select name="speed" class="dropdown" required>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -82,7 +79,7 @@
                             <option value="10">10</option>
                           </select>
                 <br>
-                <select name="intelligence" class="dropdown">
+                <select name="intelligence" class="dropdown" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -97,7 +94,11 @@
                 <br>
 
             </div>
+
         </div>
+        <footer>
+            <input type="submit" value="Submit">
+        </footer>
 
         </br>
         </input>
