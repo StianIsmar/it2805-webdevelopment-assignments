@@ -6,6 +6,7 @@ body {
     padding: 0;
     margin: 0;
     border: 0;
+    background-color: #333;
 }
 
 header {
@@ -62,23 +63,13 @@ input {
     margin: 4px;
 }
 
+input[type=date],
+input[type=number],
 input[type=text] {
     width: 15vw;
-}
-
-input[type=date] {
-    width: 15vw;
-}
-
-input[type=number] {
-    width: 15vw;
-}
-
-input input[type=text] {
-    padding: 5px;
-    border: 2px solid #ccc;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    border-style: none;
+    height: 18px;
+    border-radius: 0.1px;
 }
 
 input[type=text]:focus {
@@ -107,7 +98,7 @@ input[type=submit]:hover {
     background-color: white;
     width: 100px;
     height: 50px;
-    color: black;
+    color: #333;
     border-radius: 4px;
     border-color: #333;
 }
@@ -153,4 +144,9 @@ footer {
 
 .dropdown {
     margin-left: 3px;
+}
+
+.left,
+.right {
+    padding: 6px;
 }

@@ -1,0 +1,21 @@
+Questions
+
+1. 
+Comupters operate in binary numbers, and cannot precicely represent 0.1 as a decimal number. 
+0.1 + 0.2 in js will equal something like 0.30000000000000004. Therefore it is not 100% correct to say it is equal to 0.3.
+
+2.
+The method attribte states how to send the form-data to the page specified in the action attribute.
+In the task above, a post request was carried out. POST and GET requests can be view as HTTP post transactions.
+
+3.
+With GET-requests, the data is visible in the URL in name/value pairs. That's why it is not
+good to use GET with sensitive data. POST request hide the information in the body of the HTTP request.
+
+4.
+It is consideren bad practice to only have client side validation for input fields because it can easily be manipulated by malicious users.
+Also, if a browser does not support the form validations (like the data input) server side validation is a must.
+
+5.
+         <textarea rows = "5" cols = "50" name = "description">
+Textarea is used over input when the users need to type multiple lines in the input field. An example could be an paragraph for a job application.
