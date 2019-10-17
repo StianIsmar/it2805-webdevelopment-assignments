@@ -150,3 +150,7 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+.dropdown {
+    margin-left: 3px;
+}
