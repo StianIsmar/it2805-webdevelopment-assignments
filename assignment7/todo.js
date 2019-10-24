@@ -104,6 +104,4 @@ onload = () => {
       output.incrementTask();
     }
   };
-
-  // 1 as an argument means one more task is added.
 };
