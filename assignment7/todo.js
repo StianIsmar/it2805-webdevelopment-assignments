@@ -7,33 +7,45 @@ onload = () => {
     .addEventListener("click", function(event) {
       event.preventDefault();
     });
-};
 
-addTask = () => {
-  // The list element:
-  var li = document.createElement("li");
+  // For part 3:
+  var tasks = [];
 
-  // The input from the user:
-  var input = document.getElementById("toDoInput").value;
-  var text = document.createTextNode(input);
+  addTask = () => {
+    // The list element:
+    var li = document.createElement("li");
 
-  // The checkbox element
-  var checkbox = document.createElement("input");
-  var att = document.createAttribute("type");
-  att.value = "checkbox";
+    // The input from the user:
+    var input = document.getElementById("toDoInput").value;
+    var text = document.createTextNode(input);
 
-  // Now, set the attribute to the input element:
-  checkbox.setAttributeNode(att);
+    // The checkbox element
+    var checkbox = document.createElement("input");
+    var att = document.createAttribute("type");
+    att.value = "checkbox";
 
-  li.appendChild(checkbox);
-  li.appendChild(text);
+    // Now, set the attribute to the input element:
+    checkbox.setAttributeNode(att);
 
-  if (input == "") {
-    alert("Write a new task!");
-  } else {
-    // Add the input to the to-do list
-    document.getElementById("list").prepend(li);
-  }
-  // Clear the input now
-  document.getElementById("toDoInput").value = "";
+    li.appendChild(checkbox);
+    li.appendChild(text);
+
+    if (input == "") {
+      alert("Write a new task!");
+    } else {
+      // Add the input to the to-do list
+      document.getElementById("list").prepend(li);
+    }
+    // Clear the input now
+    document.getElementById("toDoInput").value = "";
+
+    // Part 3:
+    // Date for timestamping:
+    var dt = new Date();
+    var utcDate = dt.toUTCString();
+    // Task object:
+    var task = { text: text, date: utcDate };
+    tasks.push(task);
+    console.log(tasks);
+  };
 };
