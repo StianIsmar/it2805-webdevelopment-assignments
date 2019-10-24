@@ -1,6 +1,27 @@
 onload = () => {
   document.getElementById("toDoInput").focus();
 
+  class Output {
+    constructor(tasks) {
+      this.numberOfTasks = tasks;
+    }
+    get getNumberOfTasks() {
+      return this.numberOfTasks;
+    }
+    incrementTask(newTask) {
+      this.numberOfTasks += 1;
+      this.updateOutput();
+    }
+    completeTask(task) {
+      this.numberOfTasks -= 1;
+      this.updateOutput();
+    }
+    updateOutput() {
+      document.getElementById("output").innerHTML = this.numberOfTasks;
+    }
+  }
+  output = new Output(0);
+
   // Making sure the page isn't reloaded:
   document
     .getElementById("submitButton")
@@ -17,6 +38,7 @@ onload = () => {
       elem.parentElement.style.textDecoration = "none";
     } else {
       elem.parentElement.style.textDecoration = "line-through";
+      output.completeTask();
     }
   };
 
@@ -62,6 +84,11 @@ onload = () => {
     // Task object:
     var task = { text: text, date: utcDate };
     tasks.push(task);
+    // Prints the list of objects:
     console.log(tasks);
+
+    output.incrementTask();
   };
+
+  // 1 as an argument means one more task is added.
 };
