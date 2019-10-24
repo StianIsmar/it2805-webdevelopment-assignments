@@ -2,25 +2,39 @@ onload = () => {
   document.getElementById("toDoInput").focus();
 
   class Output {
-    constructor(tasks) {
-      this.numberOfTasks = tasks;
+    constructor(tasks, totalNumber) {
+      this.numberOfRemainingTasks = tasks;
+      this.totalNumber = totalNumber;
     }
     get getNumberOfTasks() {
-      return this.numberOfTasks;
+      return this.numberOfRemainingTasks;
+    }
+    allTasks(totalNumber) {
+      this.totalNumber = totalNumber;
     }
     incrementTask(newTask) {
-      this.numberOfTasks += 1;
+      this.numberOfRemainingTasks += 1;
       this.updateOutput();
     }
     completeTask(task) {
-      this.numberOfTasks -= 1;
+      this.numberOfRemainingTasks -= 1;
       this.updateOutput();
     }
     updateOutput() {
-      document.getElementById("output").innerHTML = this.numberOfTasks;
+      var outputString =
+        this.numberOfRemainingTasks +
+        " remaining of " +
+        this.totalNumber.toString() +
+        " tasks.";
+
+      if (this.numberOfRemainingTasks === 0 && this.totalNumber > 0) {
+        outputString += " Good job!";
+      }
+
+      document.getElementById("output").innerHTML = outputString;
     }
   }
-  output = new Output(0);
+  output = new Output(0, 0);
 
   // Making sure the page isn't reloaded:
   document
@@ -36,6 +50,7 @@ onload = () => {
   checkBox = elem => {
     if (elem.parentElement.style.textDecoration == "line-through") {
       elem.parentElement.style.textDecoration = "none";
+      output.incrementTask();
     } else {
       elem.parentElement.style.textDecoration = "line-through";
       output.completeTask();
@@ -73,21 +88,21 @@ onload = () => {
     } else {
       // Add the input to the to-do list
       document.getElementById("list").prepend(li);
+      // Clear the input now
+      document.getElementById("toDoInput").value = "";
+
+      // Part 3:
+      // Date for timestamping:
+      var dt = new Date();
+      var utcDate = dt.toUTCString();
+      // Task object:
+      var task = { text: text, date: utcDate };
+      tasks.push(task);
+      // Prints the list of objects:
+      console.log(tasks);
+      output.allTasks(tasks.length);
+      output.incrementTask();
     }
-    // Clear the input now
-    document.getElementById("toDoInput").value = "";
-
-    // Part 3:
-    // Date for timestamping:
-    var dt = new Date();
-    var utcDate = dt.toUTCString();
-    // Task object:
-    var task = { text: text, date: utcDate };
-    tasks.push(task);
-    // Prints the list of objects:
-    console.log(tasks);
-
-    output.incrementTask();
   };
 
   // 1 as an argument means one more task is added.
