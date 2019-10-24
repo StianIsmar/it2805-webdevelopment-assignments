@@ -11,6 +11,15 @@ onload = () => {
   // For part 3:
   var tasks = [];
 
+  // Function for having a line through the checked tasks:
+  checkBox = elem => {
+    if (elem.parentElement.style.textDecoration == "line-through") {
+      elem.parentElement.style.textDecoration = "none";
+    } else {
+      elem.parentElement.style.textDecoration = "line-through";
+    }
+  };
+
   addTask = () => {
     // The list element:
     var li = document.createElement("li");
@@ -27,6 +36,13 @@ onload = () => {
     // Now, set the attribute to the input element:
     checkbox.setAttributeNode(att);
 
+    // Create the attribute for the checked box-onclick
+
+    var click = document.createAttribute("onClick");
+    click.value = "checkBox(this)";
+    checkbox.setAttributeNode(click);
+
+    // Append input and text element to the list element
     li.appendChild(checkbox);
     li.appendChild(text);
 
