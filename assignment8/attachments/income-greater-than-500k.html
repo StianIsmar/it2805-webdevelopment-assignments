@@ -7,7 +7,12 @@
   </head>
   <body>
     <script>
-      console.log(taxForms);
+      for (var i = 0;i<taxForms.length;i++){
+        var hero = taxForms[i]
+        if (hero.income > 500000){
+          console.log(hero.realName);
+        }
+      }
     </script>
   </body>
 </html>
