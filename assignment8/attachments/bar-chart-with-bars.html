@@ -44,6 +44,7 @@
         var text = 100000 + 100000*i
         //drawLineWithText(text, fromX, fromY, toX,   toY) 
         var fromX = 100
+        // Starting y-value for the bootom line=500. Starting y- value for the top line: 5 => 500-5 px.
         var fromY = 500-(i*55)
         var toX = 550
         var toY = 500-(i*55)
@@ -55,12 +56,41 @@
         if (i == 9 ){
           createRectangle("blue", toX+20,toY+28,60,25,"Income")
           createRectangle("red", toX+20,toY+1,60,25,"Wealth")
-
-
         }
-        
       }
-      //9/10 8/9 7/8
+      for (var i = 0;i<taxForms.length;i++){
+        xStart = 120 + 160*i
+        console.log("Start",xStart)
+        //context.fillRect(xStart,500,40,-60)
+        var hero = taxForms[i]
+        console.log(hero)
+
+        /*
+        The distance between each line in the plot is: 495/9 = 55, because there are 9 "distances"
+        between the 9 drawn lines.
+
+        The range for the y-axis goes from [0,1000 000]. The y-value range for the graph plot goes
+        from y-value 55*10 distances = 555. The income and wealth values therefore have to be scaled.
+        This is done by dividing 1000000/555 = 1801.
+        
+        Now, divide the incom and wealth by this integer to get the scaled values, and negate it
+        since the canvas has the y-axis pointing downwards.
+        */
+       
+        var income = -hero.income/1801;
+        var wealth = -hero.wealth/1801;
+        console.log("wealth",wealth)
+        console.log("income",income)
+        console.log("=====")
+
+        // function createRectangle(color,   x,    y,  width, height,text){
+        createRectangle("red", xStart,555,30,    income,"")
+        createRectangle("blue", xStart+32,555,30,  wealth,"")
+
+
+
+      }
+  
 
     </script>
   </body>
