@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Income greather than 500 000</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+      <canvas id = "canvas" width="578" height="200" onclick ="doSomething()"></canvas>
+
+    <script>
+      for (var i = 0;i<taxForms.length;i++){
+        var hero = taxForms[i]
+        if (hero.income > 500000){
+          console.log(hero.realName);
+        }
+      }
+      canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+      var radius = 30;
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+
+      doSomething = () => {
+        console.log("Somehting");
+      }
+
+    </script>
+
+
+  </body>
+</html>

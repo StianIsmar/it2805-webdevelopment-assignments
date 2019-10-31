@@ -1,0 +1,33 @@
+Question 1:
+By running the code "var gl = c.getContext('webgl')" one is able to get a 3d canvas.
+This will give access to the webgl API which allows for 3D rendering. 
+
+Question 2:
+A circle can be drawed on the canvas with the following code found on w3school:
+      canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+      var radius = 30;
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'blue';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+
+An arc is firstly drawn then filled with coloour.
+
+Question 3:
+const myArray = ["Norawy", "Sweden","Norar"];
+var myArrayFiltered = myArray.filter(myFunc =  (x) =>{if(x[0] == "N") {return x;}}) ;
+console.log(myArrayFiltered.length);
+console.log(myArrayFiltered);
+
+This code filters the list on elements starting with "N". Pasing a function which returns the element that has a N in the start.
+
+
+
+
